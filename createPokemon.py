@@ -1,27 +1,32 @@
-class Pokemon:
-    def __init__(self, name, health, strength, weakness):
+class Pokeball:
+    def __init__(self, name):
         self.name = name
-        self.all_pokemon = {name: {"health": health, "strength": strength, "weakness": weakness}}
+        self.pokemon = []
 
-    def getPokemon(self):
-        return self.all_pokemon[self.name]
+    def catchPokemon(self, pokemon):
+        self.pokemon.append(pokemon)
 
-    def battleCry(self, amount):
-        print(f"{self.name} battle cries {amount} times!")
+    def releasePokemon(self, pokemon):
+        self.pokemon.remove(pokemon)
 
 
-print("Welcome to the Pokemon Game")
-getName = input("Enter a name for charmander: ")
-charmander = Pokemon(getName, 100, "fire", "water")
-charmander.battleCry(10)
-while True:
-    newNameQuestion = input(f"Do you want to enter a new name for {getName}? y/n")
-    if newNameQuestion == "n":
-        break
-    elif newNameQuestion == "y":
-        changeName = input("Enter a new name for charmander: ")
-        charmander.all_pokemon[changeName] = charmander.all_pokemon.pop(getName)
-        charmander.name = changeName
+class Trainer:
+    def __init__(self, name):
+        self.name = name
+        self.belt = ["Charmander", "Charmander", "Charmander", "Charmander", "Charmander", "Charmander"]
+        if len(self.belt) > 6:
+            raise Exception("You can't have more than 6 pokemon in your belt")
 
-    print(charmander.getPokemon())
-    charmander.battleCry(10)
+    def throwPokeball(self, pokemon):
+        self.belt.remove(pokemon)
+
+    def returnPokeball(self, pokemon):
+        self.belt.append(pokemon)
+
+
+input('Press any key to begin')
+nameFirstTrainer = input('Enter the name of the first trainer: ')
+nameSecondTrainer = input('Enter the name of the second trainer: ')
+firstTrainer = Trainer(nameFirstTrainer)
+firstTrainer.throwPokeball("Charmander")
+
