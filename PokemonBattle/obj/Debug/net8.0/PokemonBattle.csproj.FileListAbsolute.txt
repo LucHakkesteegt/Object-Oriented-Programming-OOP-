@@ -1,0 +1,15 @@
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\bin\Debug\net8.0\PokemonBattle.exe
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\bin\Debug\net8.0\PokemonBattle.deps.json
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\bin\Debug\net8.0\PokemonBattle.runtimeconfig.json
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\bin\Debug\net8.0\PokemonBattle.dll
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\bin\Debug\net8.0\PokemonBattle.pdb
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.AssemblyInfoInputs.cache
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.AssemblyInfo.cs
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.csproj.CoreCompileInputs.cache
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.sourcelink.json
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.dll
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\refint\PokemonBattle.dll
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.pdb
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\PokemonBattle.genruntimeconfig.cache
+C:\Users\jouke\Documents\GitHub\Object-Oriented-Programming-OOP-\PokemonBattle\obj\Debug\net8.0\ref\PokemonBattle.dll
