@@ -6,24 +6,25 @@ namespace PokemonBattle
     {
         static void Main()
         {
+
             while (true)
             {
-                Console.WriteLine("Enter a name for the first trainer:");
-                var firstTrainerName = Console.ReadLine();
-                Console.WriteLine("Enter a name for the second trainer:");
-                var secondTrainerName = Console.ReadLine();
-                var trainer1 = new Trainer(firstTrainerName);
-                var trainer2 = new Trainer(secondTrainerName);
-
-                while (trainer1.Belt.Count > 0 && trainer2.Belt.Count > 0)
+                Console.WriteLine("Enter a name for the first trainer: ");
+                string? name1 = Console.ReadLine();
+                Trainer trainer1 = new Trainer(name1);
+                Console.WriteLine("Enter a name for the second trainer: ");
+                string? name2 = Console.ReadLine();
+                Trainer trainer2 = new Trainer(name2);
+                
+                for (int i = 0; i < 6; i++)
                 {
-                    trainer1.ThrowPokeball();
-                    trainer2.ThrowPokeball();
+                    trainer1.throwPokemon().battleCry(trainer2.Name, 10);
+                    trainer2.throwPokemon().battleCry(trainer1.Name, 10);
                 }
                 
-                Console.WriteLine("Press any key to continue or 'q' to quit");
-                var key = Console.ReadKey();
-                if (key.KeyChar == 'q')
+                Console.WriteLine("Quit? (y/n)");
+                string? quit = Console.ReadLine();
+                if (quit == "y")
                 {
                     break;
                 }

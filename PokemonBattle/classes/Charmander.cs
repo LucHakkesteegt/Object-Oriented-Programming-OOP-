@@ -1,7 +1,15 @@
 ﻿namespace PokemonBattle.classes;
-class Charmander(string name) : Pokemon
+
+public class Charmander : Pokemon
 {
-    public string Name = name;
-    private string Strength = "Fire";
-    private string Weakness = "Water";
+    public string? Name;
+    public readonly string Strength = "Fire";
+    public readonly string Weakness = "Water";
+
+    public Charmander(string? name)
+    {
+        Name = name;
+    }
+
+    
 }

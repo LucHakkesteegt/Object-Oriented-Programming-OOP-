@@ -1,7 +1,8 @@
 ﻿namespace PokemonBattle.classes;
-class Squirtle(string name): Pokemon
+
+public class Squirtle : Pokemon
 {
-    public string Name = name;
-    private string Strength = "Water";
-    private string Weakness = "Grass";
+    public string? Name;
+    public readonly string Strength = "Water";
+    public readonly string Weakness = "Grass";
 }

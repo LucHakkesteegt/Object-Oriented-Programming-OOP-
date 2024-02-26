@@ -2,12 +2,11 @@
 
 public abstract class Pokemon
 {
-    public int Health = 100;
-    public void BattleCry(string name, int amountOfCries = 1)
+    public void battleCry(string name, int amount)
     {
-        for (var i = 0; i < amountOfCries; i++)
+        for (int i = 0; i < amount; i++)
         {
-            Console.WriteLine(name + "!");
+            Console.WriteLine(name + " says: " + name + "!");
         }
     }
 }

@@ -1,30 +1,24 @@
-﻿namespace PokemonBattle.classes
-{
-    class Trainer
-    {
-        public string Name { get; private set; }
-        public List<Pokemon> Belt { get; private set; }
+﻿namespace PokemonBattle.classes;
 
-        public Trainer(string name)
+public class Trainer
+{
+    public string? Name;
+    private List<Pokeball> belt = [];
+    
+    public Trainer(string? name)
+    {
+        Name = name;
+        for (int i = 0; i < 6; i++)
         {
-            Name = name;
-            Belt = [];
-            
-            for (var i = 0; i < 2; i++)
-            {
-                Belt.Add(new Charmander("Charmander"));
-                Belt.Add(new Squirtle("Squirtle"));
-                Belt.Add(new Bulbasaur("Bulbasaur"));
-            }
+            belt.Add(new Pokeball(new Charmander(name)));
         }
-        
-        public void ThrowPokeball()
-        {
-            var pokemon = Belt.First();
-            string pokemonName = pokemon.ToString().Split(".").Last();
-            Console.WriteLine($"{Name} threw a Poke ball with a {pokemonName} inside!");
-            pokemon.BattleCry(pokemonName, 1);
-            Belt.Remove(pokemon);
-        }
+    }
+    
+    public Pokeball throwPokemon()
+    {
+        Pokeball pokemon = belt[0];
+        belt.RemoveAt(0);
+        pokemon.battleCry(Name, 10);
+        return pokemon;
     }
 }

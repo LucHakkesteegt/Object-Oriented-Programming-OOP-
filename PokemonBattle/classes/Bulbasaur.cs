@@ -1,7 +1,8 @@
 ﻿namespace PokemonBattle.classes;
-class Bulbasaur(string name) : Pokemon
+
+public class Bulbasaur : Pokemon
 {
-    public string Name = name;
-    private string Strength = "Grass";
-    private string Weakness = "Fire";
+    public string? Name;
+    public readonly string Strength = "Grass";
+    public readonly string Weakness = "Fire";
 }
