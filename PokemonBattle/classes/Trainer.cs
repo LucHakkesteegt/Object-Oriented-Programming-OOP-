@@ -1,24 +1,51 @@
-﻿namespace PokemonBattle.classes;
-
-public class Trainer
+﻿namespace PokemonBattle.classes
 {
-    public string? Name;
-    private List<Pokeball> belt = [];
-    
-    public Trainer(string? name)
+    public class Trainer
     {
-        Name = name;
-        for (int i = 0; i < 6; i++)
+        public string Name { get; }
+        private List<Pokeball> belt;
+
+        public Trainer(string name)
         {
-            belt.Add(new Pokeball(new Charmander(name)));
+            Name = name;
+            belt = new List<Pokeball>();
+
+
+            InitializeBelt();
         }
-    }
-    
-    public Pokeball throwPokemon()
-    {
-        Pokeball pokemon = belt[0];
-        belt.RemoveAt(0);
-        pokemon.battleCry(Name, 10);
-        return pokemon;
+
+        private void InitializeBelt()
+        {
+            const int numberOfPokeballs = 2;
+            for (int i = 0; i < numberOfPokeballs; i++)
+            {
+                belt.Add(new Pokeball(new Charmander("Charmander"), this));
+                belt.Add(new Pokeball(new Squirtle("Squirtle"), this));
+                belt.Add(new Pokeball(new Bulbasaur("Bulbasaur"), this));
+            }
+        }
+
+        public Pokeball ThrowPokemon(string trainerName)
+        {
+            // get a random pokemon from the belt
+            Random random = new Random();
+            int index = random.Next(belt.Count);
+            Pokeball pokeball = belt[index];
+            belt.RemoveAt(index);
+            
+            Console.WriteLine(trainerName + " throws " + pokeball.Pokemon.Name + "!");
+            pokeball.Pokemon.BattleCry(pokeball.Pokemon.Name, 1);
+            return pokeball;
+        }
+
+        public void RemovePokemon(Pokeball pokeball)
+        {
+            belt.Remove(pokeball);
+        }
+
+        public bool HasPokemon()
+        {
+            return belt.Count > 0;
+        }
     }
 }

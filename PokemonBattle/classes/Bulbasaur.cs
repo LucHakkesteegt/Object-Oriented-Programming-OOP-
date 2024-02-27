@@ -2,7 +2,8 @@
 
 public class Bulbasaur : Pokemon
 {
-    public string? Name;
-    public readonly string Strength = "Grass";
-    public readonly string Weakness = "Fire";
+    public Bulbasaur(string name) : base(name, PokemonType.Grass, PokemonType.Fire)
+    {
+    }
+    
 }
