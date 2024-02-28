@@ -27,17 +27,12 @@ public class Battle
             }
             else
             {
-                Console.WriteLine("It's a tie between the pokemon!");
+                Console.WriteLine("It's a tie between the pokemon!\n");
             }
-            
-            Console.WriteLine(pokemon1.Pokemon.Strength);
-            Console.WriteLine(pokemon2.Pokemon.Weakness);
 
             Round++;
         }
         
-        Console.WriteLine(_winCountP1);
-
         if (_winCountP1 > 3)
         {
             Console.WriteLine($"{trainer1.Name} wins the battle!");
