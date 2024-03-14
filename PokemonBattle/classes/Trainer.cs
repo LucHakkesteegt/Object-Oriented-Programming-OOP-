@@ -3,14 +3,15 @@
     public class Trainer
     {
         public string Name { get; }
+        // list must only be filled with pokeballs
         private List<Pokeball> belt;
 
         public Trainer(string name)
         {
             Name = name;
             belt = new List<Pokeball>();
-
-
+            
+            // initialize the belt with 2 of each pokemon
             InitializeBelt();
         }
 
@@ -27,7 +28,7 @@
 
         public Pokeball ThrowPokemon(string trainerName)
         {
-            // get a random pokemon from the belt
+            // get a random pokemon from the belt with a random index
             Random random = new Random();
             int index = random.Next(belt.Count);
             Pokeball pokeball = belt[index];

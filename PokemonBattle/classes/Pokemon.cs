@@ -10,9 +10,8 @@ public enum PokemonType
 public abstract class Pokemon
 {
     public string Name { get; }
-    public PokemonType Strength { get; }
+    public PokemonType Strength { get; private set; }
     public PokemonType Weakness { get; }
-
     protected Pokemon(string name, PokemonType strength, PokemonType weakness)
     {
         Name = name;

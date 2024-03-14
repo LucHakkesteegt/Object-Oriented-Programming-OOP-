@@ -33,19 +33,19 @@ public class Battle
             Round++;
         }
         
-        if (_winCountP1 > 3)
+        switch (_winCountP1)
         {
-            Console.WriteLine($"{trainer1.Name} wins the battle!");
-            _winner = trainer1;
-        }
-        else if (_winCountP1 < 3)
-        {
-            Console.WriteLine($"{trainer2.Name} wins the battle!");
-            _winner = trainer2;
-        }
-        else
-        {
-            Console.WriteLine("It's a tie!");
+            case > 3:
+                Console.WriteLine($"{trainer1.Name} wins the battle!");
+                _winner = trainer1;
+                break;
+            case < 3:
+                Console.WriteLine($"{trainer2.Name} wins the battle!");
+                _winner = trainer2;
+                break;
+            default:
+                Console.WriteLine("It's a tie!");
+                break;
         }
 
         return _winner;
